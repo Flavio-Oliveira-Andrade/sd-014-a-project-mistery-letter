@@ -1,23 +1,29 @@
-*{
-    margin:0;
-    padding: 0;
-    
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color:rgb(43, 43, 43);
-    font-family: Montserrat, sans-serif;
+body {
+  background-color: rgb(43, 43, 43);
+  font-family: Montserrat, sans-serif;
 }
-header{
-    color: rgb(225, 225, 225);
-    font-size: 50px;
-    font-family: Mystery quest;
-    text-align: center;
-    padding: 30px 0px;
+header {
+  color: rgb(225, 225, 225);
+  font-size: 50px;
+  font-family: Mystery quest;
+  text-align: center;
+  padding: 30px 0px;
 }
-main{
-    text-align: center;
+main {
+  text-align: center;
 }
-#carta-gerada{
-    margin-top: 50px;
+#carta-gerada {
+  margin-top: 50px;
+}
+
+/* Estilos das palavras */
+.newspaper {
+  background-color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
 }
