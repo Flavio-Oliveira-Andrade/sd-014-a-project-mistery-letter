@@ -9,19 +9,10 @@ contador.innerText = document.getElementsByTagName('span').length;
 
 const estilo = ['newspaper', 'magazine1', 'magazine2', 'rotateleft', 'rotateright'];
 const sizegp = ['medium', 'big', 'reallybig', 'skewleft', 'skewright'];
-const rotgp = ['rotateleft', 'rotateright'];
-const skewgp = ['skewleft', 'skewright'];
+// const rotgp = ['rotateleft', 'rotateright'];
+// const skewgp = ['skewleft', 'skewright'];
 
-// let rdmA = estilo[Math.floor(Math.random()*3)]
-// let rdmB = sizegp[Math.floor(Math.random()*3)]
-// let rdmC = rotgp[Math.floor(Math.random()*2)]
-// let rdmD = skewgp[Math.floor(Math.random()*2)]
-
-function gerar() {
-  while (par.firstChild) {
-    par.removeChild(par.firstChild);
-  }
-  wCount = 0;
+function checkSpaces() {
   const palavra = input.value;
   if (palavra[0] === ' ') {
     for (const index in palavra) {
@@ -30,10 +21,26 @@ function gerar() {
         contaEspaco += 1;
       }
       if (palavra.length === contaEspaco) {
-        par.innerText = 'Por favor, digite o conteúdo da carta.';
+        return 'close';
       }
     }
-  } else if (input.value === '') {
+  }
+}
+
+function checkNull() {
+  if (input.value === '') {
+    return 'close';
+  }
+}
+
+function gerar() {
+  const palavra = input.value;
+  while (par.firstChild) {
+    par.removeChild(par.firstChild);
+  }
+
+  wCount = 0;
+  if (checkSpaces() === 'close' || checkNull === 'close') {
     par.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
     let string = '';
