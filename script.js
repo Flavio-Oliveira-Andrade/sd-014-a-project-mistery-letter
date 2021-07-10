@@ -24,7 +24,7 @@ const listOfClasses = [
 const getClasses = () => {
   const classlist = [];
   listOfClasses.forEach((style) => {
-    const num = Math.trunc(Math.random() * style.length);
+    const num = Math.trunc(Math.random() * Object.keys(style).length);
     classlist.push(style[num]);
   });
   return classlist;
@@ -40,7 +40,7 @@ criarCarta.addEventListener('click', () => {
     letter.forEach((word) => {
       const span = document.createElement('span');
       span.innerText = `${word} `;
-      span.classList = getClasses();
+      span.classList.add(...getClasses());
       cartaGerada.appendChild(span);
     });
   }

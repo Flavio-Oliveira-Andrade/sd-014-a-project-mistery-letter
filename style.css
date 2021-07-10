@@ -19,6 +19,13 @@ main {
 }
 #carta-gerada {
   margin-top: 50px;
+  width: 70%;
+  margin: 50px auto;
+}
+
+#carta-gerada span{
+  display: inline-block;
+  margin: 10px;
 }
 
 /* Estilos das palavras */
@@ -39,7 +46,7 @@ main {
 }
 
 .magazine2{
-  background-image: 'images/pink-pattern.png';
+  background-image: url('./images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
