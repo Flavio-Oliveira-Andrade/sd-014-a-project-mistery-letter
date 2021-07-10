@@ -18,6 +18,9 @@ let skewgp = [`skewleft`, `skewright`]
 // let rdmD = skewgp[Math.floor(Math.random()*2)]
 
 function gerar(){
+    while (par.firstChild){
+        par.removeChild(par.firstChild)
+    }
     wCount = 0;
     let palavra = input.value;
     if (palavra[0] === ' '){
@@ -38,6 +41,7 @@ function gerar(){
             if(input.value[i] !== ' '){
                 string += input.value[i]
             } else {
+                
                 // string += ' '
                 let span = document.createElement('span');
                 span.innerText = string;
