@@ -1,10 +1,12 @@
 *{
     margin:0;
     padding: 0;
+    
 }
 
 body{
     background-color:rgb(43, 43, 43);
+    font-family: Montserrat, sans-serif;
 }
 header{
     color: rgb(225, 225, 225);
@@ -12,4 +14,10 @@ header{
     font-family: Mystery quest;
     text-align: center;
     padding: 30px 0px;
+}
+main{
+    text-align: center;
+}
+#carta-gerada{
+    margin-top: 50px;
 }
