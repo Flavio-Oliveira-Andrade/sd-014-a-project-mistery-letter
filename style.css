@@ -22,6 +22,8 @@ main {
 }
 
 /* Estilos das palavras */
+
+/* Grupo estilo */
 .newspaper {
   background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
@@ -43,6 +45,7 @@ main {
   font-weight: 900;
 }
 
+/* Grupo tamanho */
 .medium{
   font-size: 20px;
   padding: 8px;
@@ -52,3 +55,28 @@ main {
   font-size: 30px;
   padding: 10px;
 }
+
+.reallybig{
+  font-size: 40px;
+  padding: 15px;
+}
+
+/* Grupo rotação */
+.rotateleft{
+  transform: rotate(-5deg);
+}
+
+.rotateright{
+  transform: rotate(5deg);
+}
+
+/* Grupo inclinação */
+.skewleft{
+  transform: skewX(10deg);
+}
+
+.skewright{
+  transform: skewX(-10deg);
+}
+
+

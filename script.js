@@ -1,6 +1,7 @@
 const criarCarta = document.getElementById('criar-carta');
 const cartaTexto = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
+// const estilo = []
 
 criarCarta.addEventListener('click', () => {
   let letter = cartaTexto.value.trim();
