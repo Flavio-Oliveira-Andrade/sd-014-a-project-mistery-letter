@@ -1,4 +1,6 @@
 const cardButton = document.getElementById('criar-carta');
+const pContador = document.getElementById('carta-contador');
+let contador;
 
 function random(number) {
   return Math.floor(Math.random() * number);
@@ -26,6 +28,8 @@ function gerarCarta() {
   card.innerHTML = '';
   if (input.trim() !== '') {
     const cartas = input.split(' ');
+    contador = cartas.length;
+    pContador.innerText = contador;
     for (let index = 0; index < cartas.length; index += 1) {
       const element = document.createElement('span');
       element.innerHTML = cartas[index];
@@ -34,6 +38,8 @@ function gerarCarta() {
     }
   } else {
     card.innerText = 'Por favor, digite o conteúdo da carta.';
+    contador = 0;
+    pContador.innerText = contador;
   }
 }
 
