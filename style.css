@@ -1,14 +1,20 @@
 * {
+  font-family: Encode Sans SC, sans-serif;
   margin: auto;
   width: 80%;
 }
 
 input , button {
   display: grid;
+  margin-top: 12px;
   width: 200px;
 }
 
 footer {
   margin-top: 400px;
   text-align: center;
+}
+
+#link {
+  text-decoration: none;
 }
