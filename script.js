@@ -37,10 +37,10 @@ criarCarta.addEventListener('click', () => {
   let letter = cartaTexto.value.trim();
   if (letter === '') {
     cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+    cartaContador.innerText = '0';
   } else {
     letter = letter.split(/[ ]+/);
-    const wordCount = letter.length;
-    cartaContador.innerText = `${wordCount}`;
+    cartaContador.innerText = `${letter.length}`;
 
     cartaGerada.innerHTML = '';
     letter.forEach((word) => {
