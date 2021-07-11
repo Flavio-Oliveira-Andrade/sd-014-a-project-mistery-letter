@@ -17,8 +17,7 @@ function criaClasse(elemento) {
   const grupoTamanho = ['medium', 'big', 'reallybig'];
   const grupoRotacao = ['rotateleft', 'rotateright'];
   const grupoInclinação = ['skewleft', 'skewright'];
-  return randomClass(
-    [grupoEstilo, grupoTamanho, grupoRotacao, grupoInclinação], elemento);
+  return randomClass([grupoEstilo, grupoTamanho, grupoRotacao, grupoInclinação], elemento);
 }
 
 function gerarCarta() {
