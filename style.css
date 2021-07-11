@@ -5,23 +5,54 @@
 }
 
 input , button {
+  border: none;
+  border-radius: 12px;
   display: grid;
   margin-top: 12px;
   width: 200px;
 }
 
+button {
+  background-color: #008cba;
+  border: 2px solid #008cba;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  padding: 8px;
+  font-weight: 700;
+  transition-duration: 0.1s;
+}
+
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+input {
+  background-color: #e7e7e7;
+  padding: 4px;
+  transition: width 0.4s ease-in-out;
+}
+
+input:focus {
+  width: 100%;
+}
+
 footer {
-  margin-top: 400px;
+  margin-top: 200px;
   text-align: center;
 }
 
 #carta-gerada {
-  margin-top: 80px;
+  margin: 80px 0;
 }
 
-#carta-contador {
+#carta-contador , #titulo-contador {
   text-align: center;
-  margin-top: 80px;
 }
 
 #link {
