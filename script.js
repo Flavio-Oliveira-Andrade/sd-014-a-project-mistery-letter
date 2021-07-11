@@ -9,8 +9,8 @@ function AddRansom() {
     letterDisplay.innerHTML = 'Por favor, digite o conteúdo da carta.';
     return;
   }
-  let rnsmWords = writeDown.value.split(' ');
-  for (let i = 0; i < rnsmWords.length; i+=1) {
+  const rnsmWords = writeDown.value.split(' ');
+  for (let i = 0; i < rnsmWords.length; i += 1) {
     const rnsmBlock = document.createElement('span');
     rnsmBlock.innerText = rnsmWords[i];
     letterDisplay.appendChild(rnsmBlock);
