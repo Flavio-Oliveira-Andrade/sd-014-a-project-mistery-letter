@@ -39,21 +39,21 @@ body {
 }
 
 .rotateleft {
+  display: inline-block;
   transform: rotate(-5deg);
 }
 
 .rotateright {
+  display: inline-block;
   transform: rotate(5deg);
 }
 
 .skewleft {
+  display: inline-block;
   transform: skewX(10deg);
 }
 
 .skewright {
-  transform: skewX(-10deg);
-}
-
-.block {
   display: inline-block;
+  transform: skewX(-10deg);
 }
