@@ -5,8 +5,8 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  font-weight: bold, 900;
   color: black;
 }
 
@@ -23,4 +23,14 @@ body {
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
 }
