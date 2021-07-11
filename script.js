@@ -45,3 +45,12 @@ criarCarta.addEventListener('click', () => {
     });
   }
 });
+
+cartaGerada.addEventListener('click', (event) => {
+  const word = event.target;
+  if (word.tagName === 'SPAN') {
+    const list = word.classList;
+    word.classList.remove(...list);
+    word.classList.add(...getClasses());
+  }
+});
