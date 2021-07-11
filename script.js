@@ -34,7 +34,7 @@ function generateLetter() {
     } else {
       outputParagraph.innerHTML = ''; // Clears past outputs
       const outputArray = input.value.trim().split(' '); // Turns input into array
-      document.getElementById('carta-contador').innerText = outputArray.length;
+      document.getElementById('carta-contador').innerText = `Contagem de palavras: ${outputArray.length}`;
       printsLetter(outputArray);
     }
   });
