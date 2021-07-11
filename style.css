@@ -1,5 +1,4 @@
 * {
-
   font-family: Encode Sans SC, sans-serif;
   margin: auto;
   width: 80%;
@@ -14,6 +13,10 @@ input , button {
 footer {
   margin-top: 400px;
   text-align: center;
+}
+
+#carta-gerada {
+  margin-top: 80px;
 }
 
 #link {
