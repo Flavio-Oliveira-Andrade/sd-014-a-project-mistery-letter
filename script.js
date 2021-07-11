@@ -10,49 +10,49 @@ function RandomizeStyle(word) {
   const rotationRandom = Math.floor(Math.random() * 3);
   const skewRandom = Math.floor(Math.random() * 3);
   switch (styleRandom) {
-    case 0:
-      word.classList.add('newspaper');
+  case 0:
+    word.classList.add('newspaper');
     break;
-    case 1:
-      word.classList.add('magazine1');
+  case 1:
+    word.classList.add('magazine1');
     break;
-    case 2:
-      word.classList.add('magazine2');
+  case 2:
+    word.classList.add('magazine2');
     break;
-    default:
+  default:
     break;
   }
   switch (sizeRandom) {
-    case 0:
-      word.classList.add('medium');
+  case 0:
+    word.classList.add('medium');
     break;
-    case 1:
-      word.classList.add('big');
+  case 1:
+    word.classList.add('big');
     break;
-    case 2:
-      word.classList.add('reallybig');
+  case 2:
+    word.classList.add('reallybig');
     break;
-    default:
+  default:
     break;
   }
   switch (rotationRandom) {
-    case 0:
-      word.classList.add('rotateleft');
+  case 0:
+    word.classList.add('rotateleft');
     break;
-    case 1:
-      word.classList.add('rotateright');
+  case 1:
+    word.classList.add('rotateright');
     break;
-    default:
+  default:
     break;
   }
   switch (skewRandom) {
-    case 0:
-      word.classList.add('skewleft');
+  case 0:
+    word.classList.add('skewleft');
     break;
-    case 1:
-      word.classList.add('skewright');
+  case 1:
+    word.classList.add('skewright');
     break;
-    default:
+  default:
     break;
   }
   console.log(word.classList);
