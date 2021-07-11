@@ -1,0 +1,14 @@
+* {
+  margin: auto;
+  width: 80%;
+}
+
+input , button {
+  display: grid;
+  width: 200px;
+}
+
+footer {
+  margin-top: 400px;
+  text-align: center;
+}
