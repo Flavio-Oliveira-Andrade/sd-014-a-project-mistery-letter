@@ -7,6 +7,7 @@ function generateLetter() {
     if (input.value.trim() === '') { // .trim() removes beginning and endind whitespaces
       outputParagraph.innerText = 'Por favor, digite o conteúdo da carta.';
     } else {
+      outputParagraph.innerHTML = ''; // Clears past outputs
       const outputArray = input.value.split(' '); // Turns input into array
       for (let index = 0; index < outputArray.length; index += 1) {
         const outputLetter = document.createElement('span');
