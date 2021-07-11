@@ -1,6 +1,7 @@
 const criarCarta = document.getElementById('criar-carta');
 const cartaTexto = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
+const cartaContador = document.getElementById('carta-contador');
 const listOfClasses = [
   {
     0: 'newspaper',
@@ -21,6 +22,8 @@ const listOfClasses = [
     1: 'skewright',
   }];
 
+cartaContador.innerText = 'Quantidade de palavras: 0';
+
 const getClasses = () => {
   const classlist = [];
   listOfClasses.forEach((style) => {
@@ -36,6 +39,9 @@ criarCarta.addEventListener('click', () => {
     cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
     letter = letter.split(/[ ]+/);
+    const wordCount = letter.length;
+    cartaContador.innerText = `Quantidade de palavras: ${wordCount}`;
+
     cartaGerada.innerHTML = '';
     letter.forEach((word) => {
       const span = document.createElement('span');

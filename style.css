@@ -14,10 +14,21 @@ header {
   text-align: center;
   padding: 30px 0px;
 }
+
+#carta-contador {
+  color: rgb(225, 225, 225);
+  margin-top: 50px;
+  width: 70%;
+  margin: 50px auto;
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
 main {
   text-align: center;
 }
-#carta-gerada {
+#carta-gerada{
   margin-top: 50px;
   width: 70%;
   margin: 50px auto;
