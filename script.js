@@ -22,7 +22,7 @@ const listOfClasses = [
     1: 'skewright',
   }];
 
-cartaContador.innerText = 'Quantidade de palavras: 0';
+cartaContador.innerText = '0';
 
 const getClasses = () => {
   const classlist = [];
@@ -40,7 +40,7 @@ criarCarta.addEventListener('click', () => {
   } else {
     letter = letter.split(/[ ]+/);
     const wordCount = letter.length;
-    cartaContador.innerText = `Quantidade de palavras: ${wordCount}`;
+    cartaContador.innerText = `${wordCount}`;
 
     cartaGerada.innerHTML = '';
     letter.forEach((word) => {
