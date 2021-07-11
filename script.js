@@ -8,6 +8,7 @@ function estilizar(tagSpan) {
   tagSpan.classList.add(grupoTamanho[Math.floor(Math.random() * 3)]);
   tagSpan.classList.add(grupoRotacao[Math.floor(Math.random() * 2)]);
   tagSpan.classList.add(grupoInclinacao[Math.floor(Math.random() * 2)]);
+  tagSpan.classList.add('block');
 }
 
 const buttonCriaCarta = document.querySelector('#criar-carta');

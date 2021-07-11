@@ -4,7 +4,7 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 700;
 }
 
@@ -52,4 +52,8 @@ body {
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+.block {
+  display: inline-block;
 }
