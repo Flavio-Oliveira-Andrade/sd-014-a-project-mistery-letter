@@ -1,5 +1,26 @@
 const cardButton = document.getElementById('criar-carta');
 
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function randomClass(grupo, elemento) {
+  let numberIndex;
+  for (let i = 0; i < grupo.length; i += 1) {
+    numberIndex = random(grupo[i].length);
+    elemento.classList.add(grupo[i][numberIndex]);
+  }
+}
+
+function criaClasse(elemento) {
+  const grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
+  const grupoTamanho = ['medium', 'big', 'reallybig'];
+  const grupoRotacao = ['rotateleft', 'rotateright'];
+  const grupoInclinação = ['skewleft', 'skewright'];
+  return randomClass(
+    [grupoEstilo, grupoTamanho, grupoRotacao, grupoInclinação], elemento);
+}
+
 function gerarCarta() {
   const input = document.getElementById('carta-texto').value;
   const card = document.getElementById('carta-gerada');
@@ -9,6 +30,7 @@ function gerarCarta() {
     for (let index = 0; index < cartas.length; index += 1) {
       const element = document.createElement('span');
       element.innerHTML = cartas[index];
+      criaClasse(element);
       card.appendChild(element);
     }
   } else {
