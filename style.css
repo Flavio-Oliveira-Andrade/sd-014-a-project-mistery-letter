@@ -7,34 +7,33 @@ body {
   background-color: rgb(43, 43, 43);
   font-family: Montserrat, sans-serif;
 }
+
 header {
   color: rgb(225, 225, 225);
   font-size: 50px;
-  font-family: Mystery quest;
+  font-family: Mystery quest, cursive;
   text-align: center;
-  padding: 30px 0px;
+  padding: 30px 0;
 }
 
 #carta-contador {
   color: rgb(225, 225, 225);
-  margin-top: 50px;
   width: 70%;
   margin: 50px auto;
   font-weight: 700;
   font-size: 20px;
-
 }
 
 main {
   text-align: center;
 }
-#carta-gerada{
-  margin-top: 50px;
+
+#carta-gerada {
   width: 70%;
   margin: 50px auto;
 }
 
-#carta-gerada span{
+#carta-gerada span {
   display: inline-block;
   margin: 10px;
 }
@@ -44,19 +43,19 @@ main {
 /* Grupo estilo */
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Times New Roman, Times, serif;
   font-weight: 700;
 }
 
-.magazine1{
+.magazine1 {
   background-color: teal;
-  color:white;
+  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-.magazine2{
+.magazine2 {
   background-image: url('./images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -64,37 +63,35 @@ main {
 }
 
 /* Grupo tamanho */
-.medium{
+.medium {
   font-size: 20px;
   padding: 8px;
 }
 
-.big{
+.big {
   font-size: 30px;
   padding: 10px;
 }
 
-.reallybig{
+.reallybig {
   font-size: 40px;
   padding: 15px;
 }
 
 /* Grupo rotação */
-.rotateleft{
+.rotateleft {
   transform: rotate(-5deg);
 }
 
-.rotateright{
+.rotateright {
   transform: rotate(5deg);
 }
 
 /* Grupo inclinação */
-.skewleft{
+.skewleft {
   transform: skewX(10deg);
 }
 
-.skewright{
+.skewright {
   transform: skewX(-10deg);
 }
-
-
