@@ -18,6 +18,7 @@ btn.addEventListener("click", function () {
     getParagraph[0].innerHTML = 'Por favor, digite o conteúdo da carta.'
 
   } else {
+    getParagraph[0].innerHTML = '';
     const array = input.value.split(' ');
     
     
@@ -34,4 +35,5 @@ btn.addEventListener("click", function () {
       getParagraph[0].appendChild(span);
     }
   }
+  
 })
