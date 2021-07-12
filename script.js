@@ -1,6 +1,7 @@
 const btnCreate = document.getElementById('criar-carta');
 const cartaGerada = document.getElementById('carta-gerada');
 const textInput = document.getElementById('carta-texto');
+const contador = document.getElementById('carta-contador');
 
 const estilo = ['newspaper', 'magazine1', 'magazine2'];
 const tamanho = ['medium', 'big', 'reallybig'];
@@ -14,6 +15,7 @@ function rdn(array) {
 
 function createLetter() {
   const words = textInput.value.split(' ');
+  contador.innerHTML = words.length;
   while (cartaGerada.firstChild) {
     cartaGerada.removeChild(cartaGerada.lastChild);
   }
@@ -25,8 +27,15 @@ function createLetter() {
       letter.innerHTML = words[i];
       letter.className = [rdn(estilo), rdn(tamanho), rdn(rotacao), rdn(inclinacao)].join(' ');
       cartaGerada.appendChild(letter);
+      
     }
   }
 }
 
 btnCreate.addEventListener('click', createLetter);
+
+function changeStyle(event) {
+  event.target.className = [rdn(estilo), rdn(tamanho), rdn(rotacao), rdn(inclinacao)].join(' ');
+}
+
+cartaGerada.addEventListener('click', changeStyle);
