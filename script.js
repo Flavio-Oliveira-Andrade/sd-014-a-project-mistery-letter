@@ -39,13 +39,13 @@ function verificaInput() {
 
 button.addEventListener('click', function () {
   pElement.innerHTML = '';
-  let arr = input.value.split(' ');
-  let arrLength = arr.length;
+  const arr = input.value.split(' ');
+  const arrLength = arr.length;
   if (verificaInput()) {
     pElement.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
     for (let i = 0; i < arrLength; i += 1) {
-      let span = document.createElement('span');
+      const span = document.createElement('span');
       span.innerHTML = arr[i];
       pElement.appendChild(span);
     }
