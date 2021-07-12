@@ -1,23 +1,30 @@
 const btnCreate = document.querySelector('#criar-carta');
 const letterResult = document.querySelector('#carta-gerada');
+const letterInput = document.querySelector('#carta-texto');
 
 const allF = {
   create: function newLetter(string, result) {
-    if (string.value === '') {
-      return alert('Por favor, digite o conteúdo da carta.');
-    }
+    allF.clearLetter();
+    allF.checker(letterInput.value);
     const words = string.split(' ');
     for (let index = 0; index < words.length; index += 1) {
-      const word = `${words[index]} `;
       const wordSpace = document.createElement('span');
       result.appendChild(wordSpace);
-      wordSpace.innerText = word;
+      wordSpace.innerText = `${words[index]}`;
     }
+  },
+  checker: function checkText(string) {
+    if (string.split(' ').every((x) => x === '')) {
+      letterResult.innerText = 'por favor, digite o conteúdo da carta.';
+    }
+  },
+  clearLetter: function clear() {
+    letterResult.innerHTML = '';
   },
 };
 
 // Event Listener
 // Ao clicar criar a carta
 btnCreate.addEventListener('click', () => {
-  allF.create(document.querySelector('#carta-texto').value, letterResult);
+  allF.create(letterInput.value, letterResult);
 });
