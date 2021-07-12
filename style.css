@@ -22,7 +22,6 @@ header , main {
   margin: 4vh 5vw;
 }
 
-
 #carta-texto {
   width: 70vw;
   height: 5vh;
@@ -35,8 +34,8 @@ header , main {
 }
 
 #criar-carta {
-  width: 30vw;
-  height: 8vh;
+  width: 40vw;
+  height: 6vh;
   margin-top: 1vh;
   background-color: #aaa;
   border: 4px solid teal;
