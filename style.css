@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    background-color: silver;
+}
+
+#span {
+    padding: 20px 10px 20px;
+    background-color: red;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+}
