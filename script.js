@@ -1,28 +1,8 @@
 const letterContainer = document.getElementById('carta-gerada');
-
-function createLetter() {
-  const button = document.getElementById('criar-carta');
-  button.addEventListener('click', () => {
-    const text = document.getElementById('carta-texto').value;
-    const words = text.split(' ');
-    if (!text || /^\s+$/.test(text)) words[0] = 'Por favor, digite o conteúdo da carta.'
-    letterContainer.innerHTML = '';
-    letterCount(words.length);
-    for (let word of words) {
-      const newSpan = document.createElement('span');
-      randomClasses(newSpan);
-      newSpan.innerText = word;
-      letterContainer.appendChild(newSpan);
-    }
-  });
-}
-createLetter();
-
 const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
 const sizeGroup = ['medium', 'big', 'reallybig'];
 const rotationGroup = ['rotateleft', 'rotateright'];
 const slopeGroup = ['skewleft', 'skewright'];
-const groups = [styleGroup, sizeGroup, rotationGroup, slopeGroup];
 
 function randomClassGroup() {
   const groups = [styleGroup, sizeGroup, rotationGroup, slopeGroup];
@@ -50,6 +30,33 @@ function randomClasses(element) {
   }
 }
 
+function letterCount(n) {
+  const element = document.getElementById('carta-contador');
+  element.innerText = n;
+}
+letterCount(0);
+
+function createLetter() {
+  const button = document.getElementById('criar-carta');
+  button.addEventListener('click', () => {
+    const text = document.getElementById('carta-texto').value;
+    if (!text || /^\s+$/.test(text)) {
+      letterContainer.innerText = 'Por favor, digite o conteúdo da carta.';
+      return;
+    }
+    const words = text.split(' ');
+    letterContainer.innerHTML = '';
+    letterCount(words.length);
+    for (let i = 0; i < words.length; i += 1) {
+      const newSpan = document.createElement('span');
+      randomClasses(newSpan);
+      newSpan.innerText = words[i];
+      letterContainer.appendChild(newSpan);
+    }
+  });
+}
+createLetter();
+
 function changeClasses() {
   letterContainer.addEventListener('click', (event) => {
     const { target } = event;
@@ -58,8 +65,3 @@ function changeClasses() {
   });
 }
 changeClasses();
-
-function letterCount(n) {
-  const element = document.getElementById('carta-contador');
-  element.innerText = n;
-}
