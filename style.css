@@ -5,12 +5,14 @@ body {
 
 .newspaper {
     background-color: antiquewhite;
+    display: inline-block;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
 .magazine1 {
     background-color: teal;
+    display: inline-block;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
@@ -19,6 +21,7 @@ body {
 
 .magazine2 {
     background-image: url(images/pink-pattern.png);
+    display: inline-block;
     color: fuchsia;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;  

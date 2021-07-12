@@ -1,11 +1,7 @@
 const textoDigitado = document.getElementById('carta-texto');
 const btnGerarCarta = document.getElementById('criar-carta');
 const corpoDaCarta = document.getElementById('carta-gerada');
-//----------------------------------------------------------//
-const style = ['newspaper', 'magazine1', 'magazine2'];
-const rotacao = ['rotateleft', 'rotateright'];
-const inclinacao = ['skewleft', 'skewright'];
-const tamanho = ['medium', 'big', 'reallybig'];
+ contadorDePalavra = document.getElementById('carta-contador')
 //----------------------------------------------------------//
 
 // GERANDO A CARTA A PARTIR DO INPUT:
@@ -70,7 +66,11 @@ btnGerarCarta.addEventListener('click', function () {
             corpoDaCarta.appendChild(gerandoPalavras)
         }
     }
-
-
 })
 
+// CONTADOR DE PALAVRAS
+btnGerarCarta.addEventListener('click',function() {
+    let contadorDePalavra = document.getElementById('carta-contador')
+    let texto = textoDigitado.value.split(' ');
+    contadorDePalavra.innerText = texto.length;
+})
