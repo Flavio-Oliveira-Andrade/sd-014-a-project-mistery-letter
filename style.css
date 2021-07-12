@@ -108,3 +108,14 @@ header , main {
 span {
   margin: 10px;
 }
+
+footer{
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  color: tomato;
+  font-size: 2vh;
+  left: 10vw;
+  width: 80vw;
+}
