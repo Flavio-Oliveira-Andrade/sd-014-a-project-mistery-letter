@@ -53,20 +53,24 @@ function lastString(texting) {
   par.appendChild(lastSpan);
 }
 
-function gerar() {
+function thePalavra() {
   const palavra = input.value;
+  let string = '';
+  for (let i = 0; i < palavra.length; i += 1) {
+    if (input.value[i] !== ' ') {
+      string += input.value[i];
+    } else {
+      String(string);
+      string = '';
+    }
+  }
+  lastString(string);
+}
+
+function gerar() {
   clear();
   if (checkSpaces() !== 'close') {
-    let string = '';
-    for (let i = 0; i < palavra.length; i += 1) {
-      if (input.value[i] !== ' ') {
-        string += input.value[i];
-      } else {
-        String(string);
-        string = '';
-      }
-    }
-    lastString(string);
+    thePalavra();
   }
   wcount();
 }
