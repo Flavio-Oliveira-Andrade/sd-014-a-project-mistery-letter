@@ -69,6 +69,6 @@ body {
   transform: skewX(10deg);
 }
 
-.palavras-separadas {
+#carta-gerada span {
   display: inline-block;
 }
