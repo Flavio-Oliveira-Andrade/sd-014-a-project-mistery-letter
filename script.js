@@ -32,11 +32,11 @@ function addClass() {
     const currentWord = wordArray[i];
     let random4 = Math.floor(Math.random() * 3) + 2;
     for (let j = 0; j < random4; j += 1) {
-      random4 = Math.abs(Math.floor(Math.random() * 4) - j);
+      random4 = Math.floor(Math.random() * (4 - j));
       const currentGroup = groupList[random4];
       const random3 = Math.floor(Math.random() * 3);
       const random2 = Math.floor(Math.random() * 2);
-      if ([0, 1].includes(random4)) {
+      if ([styleGroup, sizeGroup].includes(currentGroup)) {
         currentWord.classList.add(currentGroup[random3]);
       } else {
         currentWord.classList.add(currentGroup[random2]);
