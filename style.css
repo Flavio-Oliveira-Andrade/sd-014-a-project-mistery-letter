@@ -39,3 +39,10 @@
   padding: 15px;
 }
 
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
