@@ -11,3 +11,12 @@
 #carta-texto {
   width: 50%;
 }
+
+button {
+  background-color: lightblue;
+  border: 1px solid gray;
+  height: 2.4rem;
+}
+button:hover {
+  opacity: 0.8;
+}

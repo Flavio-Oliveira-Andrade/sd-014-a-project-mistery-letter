@@ -1,14 +1,24 @@
-// Constantes e Variáveis
-const btnCarta = document.querySelector('#criar-carta');
-const inputCarta = document.querySelector('#carta-texto');
-const pCarta = document.querySelector('#carta-gerada');
-// Ao clicar no botão gera a carta
-btnCarta.addEventListener('click', () => {
-  const texto = inputCarta.value.split(' ');
-  function gerarSpan(item) {
+const btn = document.querySelector('#criar-carta');
+const input = document.querySelector('#carta-texto');
+const carta = document.querySelector('#carta-gerada');
+const errorMessage = 'Por favor, digite o conteúdo da carta.';
+
+function criarCarta() {
+  carta.innerText = '';
+  const texto = input.value.split(' ');
+  texto.forEach(gerarCarta);
+  function gerarCarta(item) {
     const palavra = document.createElement('span');
-    const spanGerado = pCarta.appendChild(palavra);
-    spanGerado.innerText = item;
+    carta.appendChild(palavra).innerText = item;
   }
-  texto.forEach(gerarSpan);
+};
+// Botão executa função de criar carta
+btn.addEventListener('click', () => { 
+  input.value && input.value.trim() ? criarCarta() : carta.innerText = errorMessage;
+});
+// Enter executa função de criar carta
+input.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') { 
+    input.value && input.value.trim() ? criarCarta() : carta.innerText = errorMessage;
+   } 
 });
