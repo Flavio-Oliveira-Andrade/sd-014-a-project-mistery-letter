@@ -60,3 +60,11 @@ body {
 .rotateright {
   transform: rotate(5deg);
 }
+
+.skewright {
+  transform: skewX(-10deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
