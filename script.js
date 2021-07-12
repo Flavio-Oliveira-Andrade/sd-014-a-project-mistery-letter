@@ -19,3 +19,31 @@ function createLetter() {
 }
 
 generateLetterBtn.addEventListener('click', createLetter);
+
+const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
+const sizeGroup = ['medium', 'big', 'reallybig'];
+const rotationGroup = ['rotateleft', 'rotateright'];
+const inclinationGroup = ['skewleft', 'skewright'];
+
+function addClass() {
+  const wordArray = Array.from(paragraph.children);
+  for (let i = 0; i < wordArray.length; i += 1) {
+    const groupList = [styleGroup, sizeGroup, rotationGroup, inclinationGroup];
+    const currentWord = wordArray[i];
+    let random4 = Math.floor(Math.random() * 3) + 2;
+    for (let j = 0; j < random4; j += 1) {
+      random4 = Math.abs(Math.floor(Math.random() * 4) - j);
+      const currentGroup = groupList[random4];
+      const random3 = Math.floor(Math.random() * 3);
+      const random2 = Math.floor(Math.random() * 2);
+      if ([0, 1].includes(random4)) {
+        currentWord.classList.add(currentGroup[random3]);
+      } else {
+        currentWord.classList.add(currentGroup[random2]);
+      }
+      groupList.splice(groupList.indexOf(currentGroup), 1);
+    }
+  }
+}
+
+generateLetterBtn.addEventListener('click', addClass);
