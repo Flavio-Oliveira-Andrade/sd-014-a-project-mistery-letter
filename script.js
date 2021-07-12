@@ -4,6 +4,11 @@ const input = document.querySelector('#carta-texto');
 
 // Inspiração para Regex: https://stackoverflow.com/questions/10398931/how-to-remove-text-from-a-string
 
+function countWords() {
+  const counter = document.querySelector('#carta-contador');
+  counter.innerText = (Array.from(paragraph.children)).length;
+}
+
 function createLetter() {
   paragraph.innerHTML = '';
   if (input.value.replace(/ /g, '') === '') {
@@ -16,6 +21,7 @@ function createLetter() {
       paragraph.appendChild(word);
     }
   }
+  countWords();
 }
 
 generateLetterBtn.addEventListener('click', createLetter);
