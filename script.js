@@ -59,7 +59,7 @@ function addClass() {
 generateLetterBtn.addEventListener('click', addClass);
 
 function changeClass(event) {
-  if (event.target.className !== 'carta-gerada') {
+  if (event.target.id !== 'carta-gerada') {
     const currentWord = event.target;
     currentWord.classList = [];
     addClasstoWord(currentWord);
