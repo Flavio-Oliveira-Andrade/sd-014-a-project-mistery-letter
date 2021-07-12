@@ -19,5 +19,4 @@ function createP() {
     paragraph.appendChild(span);
   }
 }
-
 button.addEventListener('click', createP);
