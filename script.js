@@ -14,13 +14,15 @@ function excluiSpans() {
 
 function separaPalavras() {
   if (input.value === '' || input.value == ' ') {
-    alert('Por favor, digite o conteúdo da carta.');
-  }
-  const palavras = input.value.split(" ");
-  for (let i of palavras) {
-    const palavra = document.createElement('span');
-    palavra.innerText = i;
-    paragrafo.appendChild(palavra);
+    paragrafo.innerText = 'Por favor, digite o conteúdo da carta.';
+  } else {
+    const palavras = input.value.split(' ');
+    paragrafo.innerText = '';
+    for (let i of palavras) {
+      const palavra = document.createElement('span');
+      palavra.innerText = i;
+      paragrafo.appendChild(palavra);
+    }
   }
   console.log(paragrafo);
 }
