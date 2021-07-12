@@ -2,6 +2,7 @@
 const button = document.querySelector('#criar-carta');
 const paragraph = document.querySelector('#carta-gerada');
 const userInput = document.querySelector('#carta-texto');
+const countP = document.querySelector('#carta-contador');
 
 function createP() {
   paragraph.innerHTML = '';
@@ -18,6 +19,8 @@ function createP() {
     span.innerText = inputSplited[i];
     paragraph.appendChild(span);
   }
+  // counter
+  countP.innerText = inputSplited.length;
 }
 button.addEventListener('click', createP);
 
@@ -39,3 +42,17 @@ function randomSpan() {
 }
 
 button.addEventListener('click', randomSpan);
+
+// change only one word
+
+function changeWord(e) {
+  const event = e.target;
+  const sR = Math.floor(Math.random() * styleArray.length);
+  const siR = Math.floor(Math.random() * sizeArray.length);
+  const rR = Math.floor(Math.random() * rotArray.length);
+  const skR = Math.floor(Math.random() * skewArray.length);
+
+  event.className = '';
+  event.classList.add(styleArray[sR], sizeArray[siR], rotArray[rR], skewArray[skR]);
+}
+paragraph.addEventListener('click', changeWord);
