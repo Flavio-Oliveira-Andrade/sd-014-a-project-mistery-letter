@@ -9,10 +9,10 @@ const classes = [ // An empty string for each class for none class
   ['skewleft', 'skewright'],
 ];
 
-function randomClasses(outputLetter) {
+function randomClasses(letter) {
   for (let index = 0; index < classes.length; index += 1) {
     if (Math.random() < 0.5) { // 50/50 condition
-      outputLetter.classList.add(classes[index][Math.floor(Math.random() * (classes[index].length))]); // Adds a random class from classes array if previous condition is true
+      letter.classList.add(classes[index][Math.floor(Math.random() * (classes[index].length))]); // Adds a random class from classes array if previous condition is true
     }
   }
 }
