@@ -1,8 +1,8 @@
 * {
-  background-color: rgb(240 , 240 , 240);
+  background-color: rgb(240, 240, 240);
   font-family: Encode Sans SC, sans-serif;
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 
 input , button {
@@ -34,7 +34,7 @@ button:hover {
 }
 
 input {
-  background-color: #e7e7e7;
+  background-color: rgb(200, 200, 200);
   padding: 4px;
   transition: width 0.4s ease-in-out;
 }
@@ -45,7 +45,7 @@ input:focus {
 
 span {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 16px;
   width: auto;
 }
 

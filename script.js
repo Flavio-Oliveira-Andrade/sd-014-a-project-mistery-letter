@@ -9,24 +9,21 @@ const classes = [ // An empty string for each class for none class
   ['skewleft', 'skewright'],
 ];
 
-function randomClasses() {
-  let classesRandomized = '';
+function randomClasses(outputLetter) {
   for (let index = 0; index < classes.length; index += 1) {
     if (Math.random() < 0.5) { // 50/50 condition
-      classesRandomized += `${classes[index][Math.floor(Math.random() * (classes[index].length))]} `; // Adds a random class from classes array if previous condition is true
+      outputLetter.classList.add(classes[index][Math.floor(Math.random() * (classes[index].length))]); // Adds a random class from classes array if previous condition is true
     }
   }
-  return classesRandomized;
 }
 
 function printsLetter(outputArray) {
   for (let index = 0; index < outputArray.length; index += 1) {
     const outputLetter = document.createElement('span');
     outputLetter.innerText = outputArray[index];
-    // while (outputLetter.classList.length < 2) { // Condition for at least two classes
-    //   outputLetter.className = randomClasses(); // Gets string output
-    // }
-    outputLetter.className = randomClasses(); // Gets string output
+    while (outputLetter.classList.length < 2) { // Condition for at least two classes
+      randomClasses(outputLetter);
+    }
     outputParagraph.appendChild(outputLetter);
   }
 }
