@@ -23,7 +23,7 @@ function classes() {
   classe1 = classe1[index1];
   let classe2 = grupos[grupo2];
   classe2 = classe2[index2];
-  return classe1, classe2;
+  return (classe1, classe2);
   // console.log(classe1);
   // console.log(classe2);
 }
