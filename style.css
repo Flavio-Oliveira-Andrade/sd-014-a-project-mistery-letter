@@ -1,4 +1,5 @@
 * {
+  background-color: rgb(240 , 240 , 240);
   font-family: Encode Sans SC, sans-serif;
   margin: auto;
   width: 80%;
@@ -42,6 +43,12 @@ input:focus {
   width: 100%;
 }
 
+span {
+  display: inline-block;
+  margin-right: 8px;
+  width: auto;
+}
+
 footer {
   margin-top: 200px;
   text-align: center;
@@ -53,6 +60,14 @@ footer {
 
 #carta-contador , #titulo-contador {
   text-align: center;
+}
+
+#carta-contador {
+  font-weight: 700;
+}
+
+#titulo-contador {
+  font-style: italic;
 }
 
 #link {

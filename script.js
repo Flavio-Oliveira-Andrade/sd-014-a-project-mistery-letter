@@ -11,8 +11,10 @@ const classes = [ // An empty string for each class for none class
 
 function randomClasses() {
   let classesRandomized = '';
-  for (const group in classes) {
-    classesRandomized += `${classes[group][Math.floor(Math.random() * (classes[group].length))]} `;
+  for (let index = 0; index < classes.length; index += 1) {
+    if (Math.random() < 0.5) { // 50/50 condition
+      classesRandomized += `${classes[index][Math.floor(Math.random() * (classes[index].length))]} `; // Adds a random class from classes array if previous condition is true
+    }
   }
   return classesRandomized;
 }
@@ -21,17 +23,19 @@ function printsLetter(outputArray) {
   for (let index = 0; index < outputArray.length; index += 1) {
     const outputLetter = document.createElement('span');
     outputLetter.innerText = outputArray[index];
-    while (outputLetter.classList.length < 2) { // Condition for at least two classes
-      outputLetter.className = randomClasses(); // Gets string output
-    }
+    // while (outputLetter.classList.length < 2) { // Condition for at least two classes
+    //   outputLetter.className = randomClasses(); // Gets string output
+    // }
+    outputLetter.className = randomClasses(); // Gets string output
     outputParagraph.appendChild(outputLetter);
   }
 }
 
 function generateLetter() {
   inputButton.addEventListener('click', () => {
-    if (input.value.trim() === '') { // .trim() removes beginning and endind whitespaces
+    if (!input.value.trim()) { // .trim() removes beginning and endind whitespaces
       outputParagraph.innerText = 'Por favor, digite o conteúdo da carta.';
+      wordCounter.innerText = 0;
     } else {
       outputParagraph.innerHTML = ''; // Clears past outputs
       const outputArray = input.value.trim().split(' '); // Turns input into array
