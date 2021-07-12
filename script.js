@@ -6,7 +6,7 @@ const cadaPal = document.getElementsByClassName('palavras-separadas');
 function gerarCarta() {
   carta.innerText = '';
   if (myInput.value.trim() === '') {
-    carta.innerText = 'Por favor, digite o conteúdo da carta.'
+    carta.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
     const arrayTexto = myInput.value.split(' ');
     for (let i = 0; i < cadaPal.length; i += 1) {
