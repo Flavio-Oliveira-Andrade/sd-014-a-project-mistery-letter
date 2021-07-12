@@ -8,10 +8,19 @@
   <title>Mistery Letter</title>
 </head>
 <body>
-  <input type="text" id="carta-texto">
-  <p id="carta-contador"></p>
-  <p id="carta-gerada"></p>
-  <button id="criar-carta">Criar carta</button>
+  <header>
+    <h1>Mistery Letter</h1>
+  </header>
+  <main class="main-content">
+    <input class="input" type="text" id="carta-texto" placeholder="Escreva um texto aqui">
+    <p class="counter" id="carta-contador"></p>
+    <div class="letter-container">
+      <p id="carta-gerada"></p>
+    </div>
+    <div class="button-container">
+      <button class="button" id="criar-carta">Criar carta</button>
+    </div>   
+  </main>
   <script src="script.js"></script>
 </body>
 </html>

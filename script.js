@@ -60,6 +60,7 @@ createLetter();
 function changeClasses() {
   letterContainer.addEventListener('click', (event) => {
     const { target } = event;
+    if (target.tagName !== 'SPAN') return;
     target.className = '';
     randomClasses(target);
   });
