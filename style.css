@@ -1,7 +1,10 @@
-#container {
+#info , #container {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+#info input {
+  height: 2rem;
 }
 
 #carta-texto {
