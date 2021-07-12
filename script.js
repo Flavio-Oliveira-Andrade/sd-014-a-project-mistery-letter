@@ -4,24 +4,18 @@ const input = document.querySelector('#carta-texto');
 
 // Inspiração para Regex: https://stackoverflow.com/questions/10398931/how-to-remove-text-from-a-string
 
-function alertEmptyLetter() {
-  const message = input.value.replace(/ /g, '');
-  console.log(message);
-  if (!input.value || !message) {
-    window.alert('Por favor, digite o conteúdo da carta.');
-  }
-}
-
-function generateLetter() {
-  alertEmptyLetter();
+function createLetter() {
   paragraph.innerHTML = '';
-  const wordArray = Array.from(input.value.split(' '));
-  for (let i = 0; i < wordArray.length; i += 1) {
-    const currentWord = document.createElement('span');
-    currentWord.innerText = wordArray[i];
-    paragraph.appendChild(currentWord);
+  if (input.value.replace(/ /g, '') === '') {
+    paragraph.innerText = 'Por favor, digite o conteúdo da carta.';
+  } else {
+    const wordArray = Array.from(input.value.split(' '));
+    for (let i = 0; i < wordArray.length; i += 1) {
+      const word = document.createElement('span');
+      word.innerText = wordArray[i];
+      paragraph.appendChild(word);
+    }
   }
-  console.log(wordArray);
 }
 
-generateLetterBtn.addEventListener('click', generateLetter);
+generateLetterBtn.addEventListener('click', createLetter);
