@@ -20,3 +20,22 @@ function createP() {
   }
 }
 button.addEventListener('click', createP);
+
+// set random classe
+const styleArray = ['newspaper', 'magazine1', 'magazine2'];
+const sizeArray = ['medium', 'big', 'reallybig'];
+const rotArray = ['rotateleft', 'rotateright'];
+const skewArray = ['skewleft', 'skewright'];
+
+function randomSpan() {
+  const allSpan = document.querySelectorAll('span');
+  for (let i = 0; i < allSpan.length; i += 1) {
+    const sR = Math.floor(Math.random() * styleArray.length);
+    const siR = Math.floor(Math.random() * sizeArray.length);
+    const rR = Math.floor(Math.random() * rotArray.length);
+    const skR = Math.floor(Math.random() * skewArray.length);
+    allSpan[i].classList.add(styleArray[sR], sizeArray[siR], rotArray[rR], skewArray[skR]);
+  }
+}
+
+button.addEventListener('click', randomSpan);
