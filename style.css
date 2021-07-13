@@ -49,3 +49,33 @@
 .skewright {
   transform: skewX(-10deg);
 }
+
+span {
+  display: inline-block;
+}
+
+body {
+  background-color: rgb(255, 250, 205)
+}
+
+h1 {
+  color: rgb(54, 54, 54);
+  margin-left: 40%;
+}
+
+#carta-texto,
+#carta-contador {
+  margin-left: 40%;
+}
+
+#carta-gerada {
+  margin-left: 30%;
+}
+
+#criar-carta {
+  background-color: rgb(218, 165, 32);
+  font-weight: bold;
+  color: black;
+  border: none;
+  border-radius: 20px;
+}
