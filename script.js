@@ -17,16 +17,16 @@ btn.addEventListener('click', () => {
   if (input.value && input.value.trim()) {
     criarCarta();
   } else {
-    carta.innerText = errorMessage; 
+    carta.innerText = errorMessage;
   }
 });
 // Enter executa função de criar carta
 input.addEventListener('keyup', (event) => {
-  if (event.key === 'Enter') { 
+  if (event.key === 'Enter') {
     if (input.value && input.value.trim()) {
       criarCarta();
     } else {
-      carta.innerText = errorMessage; 
+      carta.innerText = errorMessage;
     }
   }
 });
