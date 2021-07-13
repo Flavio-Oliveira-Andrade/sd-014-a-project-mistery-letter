@@ -6,14 +6,14 @@ const inputCarta = document.getElementById('carta-texto');
 // const gpRotacao = ['rotateleft', 'rotateright'];
 // const gpInclinacao = ['skewleft', 'skewright'];
 
-const classEstilos = ['newspaper', 'magazine1', 'magazine2','medium', 'big', 'reallybig','rotateleft', 'rotateright','skewleft', 'skewright'];
+const classEstilos = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
 
 console.log(classEstilos)
 btnCriarCarta.addEventListener('click', function () {
-  if (inputCarta.value === '' ) {
-    paragrafoCarta.innerText = 'Por favor, digite o conteúdo da carta.'
+  if (inputCarta.value === '') {
+    paragrafoCarta.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
-    const separador = inputCarta.value.split(' ')
+    const separador = inputCarta.value.split(' ');
     for (const inserir of separador) {
       const spanTexto = document.createElement('span');
       spanTexto.innerText = inserir;
