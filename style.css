@@ -2,6 +2,11 @@ section {
   margin: 20px auto;
 }
 
+/* Valeu pela dica Gustavo Dias! */
+span {
+  display: inline-block;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, serif;
@@ -52,4 +57,21 @@ section {
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+.skewleft.rotateleft {
+  transform: skewX(-10deg) rotate(-5deg);
+}
+
+.skewright.rotateleft {
+  transform: skewX(10deg) rotate(-5deg);
+}
+
+
+.skewleft.rotateright {
+  transform: skewX(-10deg) rotate(5deg);
+}
+
+.skewright.rotateright {
+  transform: skewX(10deg) rotate(5deg);
 }
