@@ -11,6 +11,10 @@ btn.id = "criar-carta";
 document.body.appendChild(btn);
 btn.innerHTML = "criar carta"
 
+const contador = document.createElement('p');
+contador.id = "carta-contador";
+document.body.appendChild(contador);
+
 btn.addEventListener("click", function () {
     const getParagraph = document.getElementsByTagName('p');
   if (input.value.trim() === '') {
@@ -33,7 +37,31 @@ btn.addEventListener("click", function () {
       const span = document.createElement('span');
       span.innerText = array[inx];
       getParagraph[0].appendChild(span);
+
+      
+      contador.innerText = array.length;
     }
+   classeAleatoria();
   }
   
 })
+
+function classeAleatoria(){
+  const grupoEstilo = ['newspaper','magazine1','magazine2'];
+const grupoTamanho = ['medium','big','reallybig'];
+const grupoRotacao = ['rotateleft','rotateright'];
+const grupoInclinacao = ['skewleft','skewright'];
+
+const getSpan = document.getElementsByTagName('span');
+
+for(let index = 0; index < getSpan.length ; index += 1){
+ 
+  getSpan[index].classList.add(grupoEstilo[Math.floor(Math.random() * grupoEstilo.length)]);
+  getSpan[index].classList.add(grupoTamanho[Math.floor(Math.random() * grupoTamanho.length)]);
+  getSpan[index].classList.add(grupoRotacao[Math.floor(Math.random() * grupoRotacao.length)]);
+  getSpan[index].classList.add(grupoInclinacao[Math.floor(Math.random() * grupoInclinacao.length)]);
+}
+}
+
+
+ 
