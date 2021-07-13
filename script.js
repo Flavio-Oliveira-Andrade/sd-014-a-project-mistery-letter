@@ -1,6 +1,7 @@
 const botao = document.getElementById('criar-carta');
 const para = document.getElementById('carta-gerada');
 const input = document.getElementById('carta-texto')
+const contador = document.getElementById('carta-contador');
 
 let classes = {
     estilo: ['newspaper', 'magazine1', 'magazine2'],
@@ -23,12 +24,14 @@ function classeF(chave) {
     return classe;
 }
 
-function criarCarta(event){
-    //para.replaceChildren();
-    frase = input.value;
-    separaFrase = frase.split(" ");
-    tamanho = separaFrase.length;
+var cont = 0;
 
+function criarCarta(event) {
+    para.replaceChildren();
+    let cont = 0;
+    let frase = input.value;
+    let separaFrase = frase.split(" ");
+    let tamanho = separaFrase.length;
     for (let i = 0; i < tamanho; i += 1) {
         let propri1 = propriedade();
         let propri2 = propriedade();
@@ -46,6 +49,8 @@ function criarCarta(event){
         propril1 = ''; propri2 = ''; classe2 = ''; classe1 = '';
 
     }
+    cont += tamanho;
+    contador.innerText = cont;
 }
 
-botao.addEventListener('click',criarCarta);
+botao.addEventListener('click', criarCarta);
