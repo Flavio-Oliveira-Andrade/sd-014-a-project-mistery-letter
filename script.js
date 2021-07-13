@@ -1,6 +1,7 @@
 const inputText = document.getElementById('carta-texto');
 const writeButton = document.getElementById('criar-carta');
 const misteryLetter = document.getElementById('carta-gerada');
+const wordsCount = document.getElementById('carta-contador');
 
 const cssClasses = {
   style: ['newspaper', 'magazine1', 'magazine2'],
@@ -36,6 +37,7 @@ function writeLetter() {
   } else {
     misteryLetter.innerHTML = '';
     const words = inputText.value.split(' ');
+    wordsCount.innerText = words.length;
     words.forEach((word) => {
       const span = document.createElement('span');
       span.innerText = word;

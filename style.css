@@ -75,3 +75,7 @@ span {
 .skewright.rotateright {
   transform: skewX(10deg) rotate(5deg);
 }
+
+#carta-contador {
+  border: black dashed 3px;
+}
