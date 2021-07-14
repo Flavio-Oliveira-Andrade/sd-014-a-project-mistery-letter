@@ -1,28 +1,26 @@
 const paragrafoCarta = document.getElementById('carta-gerada');
 const btnCriarCarta = document.getElementById('criar-carta');
 const inputCarta = document.getElementById('carta-texto');
-// const gpEstilo = ['newspaper', 'magazine1', 'magazine2'];
-// const gpTamanho = ['medium', 'big', 'reallybig'];
-// const gpRotacao = ['rotateleft', 'rotateright'];
-// const gpInclinacao = ['skewleft', 'skewright'];
+const gpEstilo = ['newspaper', 'magazine1', 'magazine2'];
+const gpTamanho = ['medium', 'big', 'reallybig'];
+const gpRotacao = ['rotateleft', 'rotateright'];
+const gpInclinacao = ['skewleft', 'skewright'];
 
-const classEstilos = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
-
-console.log(classEstilos)
 btnCriarCarta.addEventListener('click', function () {
-  if (inputCarta.value === '') {
+  if (inputCarta.value.trim().length === 0) { // .trim() retorna o texto sem espaços em branco no início e/ou fim da string.
     paragrafoCarta.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
+    paragrafoCarta.innerHTML = ' '
     const separador = inputCarta.value.split(' ');
     for (const inserir of separador) {
       const spanTexto = document.createElement('span');
       spanTexto.innerText = inserir;
-      const numRandom = Math.floor(Math.random() * 10);
-      spanTexto.classList.add(classEstilos[numRandom]);
-      spanTexto.classList.add(classEstilos[numRandom]);
-      spanTexto.classList.add(classEstilos[numRandom]);
-      spanTexto.classList.add(classEstilos[numRandom]);
+      spanTexto.classList.add(gpEstilo[Math.floor(Math.random() * 3)]);
+      spanTexto.classList.add(gpTamanho[Math.floor(Math.random() * 3)]);
+      spanTexto.classList.add(gpRotacao[Math.floor(Math.random() * 2)]);
+      spanTexto.classList.add(gpInclinacao[Math.floor(Math.random() * 2)]);
       paragrafoCarta.appendChild(spanTexto);
+
     }
   }
 });
