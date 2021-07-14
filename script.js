@@ -10,8 +10,11 @@ btnCriarCarta.addEventListener('click', function () {
   if (inputCarta.value.trim().length === 0) { // .trim() retorna o texto sem espaços em branco no início e/ou fim da string.
     paragrafoCarta.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
-    paragrafoCarta.innerHTML = ' '
+    paragrafoCarta.innerHTML = ' '; 
     const separador = inputCarta.value.split(' ');
+    const cartaContador = document.getElementById('carta-contador');
+    cartaContador.innerText = separador.length;
+
     for (const inserir of separador) {
       const spanTexto = document.createElement('span');
       spanTexto.innerText = inserir;
@@ -20,7 +23,6 @@ btnCriarCarta.addEventListener('click', function () {
       spanTexto.classList.add(gpRotacao[Math.floor(Math.random() * 2)]);
       spanTexto.classList.add(gpInclinacao[Math.floor(Math.random() * 2)]);
       paragrafoCarta.appendChild(spanTexto);
-
     }
   }
 });
