@@ -12,13 +12,16 @@ function rdn(array) {
   return array[Math.floor(Math.random() * array.length)];
   // https://stackoverflow.com/questions/9286473/whats-the-equivalent-of-sample-in-javascript
 }
+function clearLetter() {
+  while (cartaGerada.firstChild) {
+    cartaGerada.removeChild(cartaGerada.lastChild);
+  }
+}
 
 function createLetter() {
   const words = textInput.value.split(' ');
   contador.innerHTML = words.length;
-  while (cartaGerada.firstChild) {
-    cartaGerada.removeChild(cartaGerada.lastChild);
-  }
+  clearLetter();
   if (words === [] || textInput.value.trim().length === 0) { // https://stackoverflow.com/questions/10261986/how-to-detect-string-which-contains-only-spaces
     cartaGerada.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
@@ -27,7 +30,6 @@ function createLetter() {
       letter.innerHTML = words[i];
       letter.className = [rdn(estilo), rdn(tamanho), rdn(rotacao), rdn(inclinacao)].join(' ');
       cartaGerada.appendChild(letter);
-      
     }
   }
 }
