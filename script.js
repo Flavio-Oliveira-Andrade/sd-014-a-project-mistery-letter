@@ -24,15 +24,16 @@ function createLetter() {
       carta.appendChild(word);
     }
   }
-  contador.innerText = words.length
+  contador.innerText = words.length;
 }
 
 function changeWord(event) {
-  event.target.className = '';
-  event.target.classList.add(estilo[Math.floor(Math.random() * estilo.length)]);
-  event.target.classList.add(tamanho[Math.floor(Math.random() * tamanho.length)]);
-  event.target.classList.add(rotacao[Math.floor(Math.random() * rotacao.length)]);
-  event.target.classList.add(inclinacao[Math.floor(Math.random) * inclinacao.length]);
+  const word = event.target;
+  word.className = '';
+  word.classList.add(estilo[Math.floor(Math.random() * estilo.length)]);
+  word.classList.add(tamanho[Math.floor(Math.random() * tamanho.length)]);
+  word.classList.add(rotacao[Math.floor(Math.random() * rotacao.length)]);
+  word.classList.add(inclinacao[Math.floor(Math.random) * inclinacao.length]);
 }
 
 btnCriar.addEventListener('click', createLetter);
