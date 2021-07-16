@@ -1,6 +1,7 @@
 const msg = document.getElementById('carta-texto');
 const btnCriar = document.getElementById('criar-carta');
 const carta = document.getElementById('carta-gerada');
+const contador = document.getElementById('carta-contador');
 const estilo = ['newspaper', 'magazine1', 'magazine2'];
 const tamanho = ['medium', 'big', 'reallybig'];
 const rotacao = ['rotateleft', 'rotateright'];
@@ -23,6 +24,7 @@ function createLetter() {
       carta.appendChild(word);
     }
   }
+  contador.innerText = words.length
 }
 
 function changeWord(event) {
