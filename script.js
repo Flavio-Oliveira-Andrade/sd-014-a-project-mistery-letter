@@ -25,4 +25,13 @@ function createLetter() {
   }
 }
 
+function changeWord(event) {
+  event.target.className = '';
+  event.target.classList.add(estilo[Math.floor(Math.random() * estilo.length)]);
+  event.target.classList.add(tamanho[Math.floor(Math.random() * tamanho.length)]);
+  event.target.classList.add(rotacao[Math.floor(Math.random() * rotacao.length)]);
+  event.target.classList.add(inclinacao[Math.floor(Math.random) * inclinacao.length]);
+}
+
 btnCriar.addEventListener('click', createLetter);
+carta.addEventListener('click', changeWord);
