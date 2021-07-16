@@ -9,6 +9,28 @@ function limparParagrafo() {
   while (limpar[0]) limpar[0].parentNode.removeChild(limpar[0]);
 }
 
+function addContador() {
+
+  if (document.getElementById('carta-contador') === null) {
+    const input = document.getElementById('carta-texto').value;
+    const array = input.split(' ');
+    const contador = document.createElement('p');
+    contador.setAttribute('id', 'carta-contador');
+    contador.innerText = array.length;
+    document.body.appendChild(contador);
+  } else {
+    const removeCont = document.getElementById('carta-contador');
+    removeCont.parentNode.removeChild(removeCont);
+    const input = document.getElementById('carta-texto').value;
+    const array = input.split(' ');
+    const contador = document.createElement('p');
+    contador.setAttribute('id', 'carta-contador');
+    contador.innerText = array.length;
+    document.body.appendChild(contador);
+  }
+}
+
+// eslint-disable-next-line max-lines-per-function
 function gerarCarta() {
   const input = document.getElementById('carta-texto').value;
   const array = input.split(' ');
@@ -28,6 +50,7 @@ function gerarCarta() {
       paragrafo.appendChild(span);
     }
   }
+  addContador.call();
 }
 
 function paragrafoVazio() {
@@ -39,10 +62,8 @@ function paragrafoVazio() {
     paragrafo.appendChild(span);
   } else {
     gerarCarta.call();
-  } 
+  }
 }
-
-
 
 const criar = document.getElementById('criar-carta');
 criar.addEventListener('click', paragrafoVazio);
